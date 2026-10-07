@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ANTHONIA's Qualities</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section id="welcome" class="welcome-section fade-in">
+        <h1 class="welcome-title">Happy Birthday, Mummy!</h1>
+        <p class="welcome-message">
+            You are the most beautiful, confident, and smartest woman I've ever met.
+            I love you so much, and I'm proud of the woman you are.
+        </p>
+        <p class="welcome-attributes">
+            Beautiful · Confident · Brilliant · Admirable · Nurturing · Tenacious ·
+            Harmonious · Outstanding · Noble · Irreplaceable · Angelic
+        </p>
+        <a href="#A" class="next-btn">Explore Her Qualities →</a>
+    </section>
+
+    <!-- A -->
+    <section id="A" class="letter-section fade-in">
+        <h1 class="letter-title">A — Admirable</h1>
+        <img src="images/A.jpg" class="letter-img" alt="A photo celebrating her admirable qualities">
+        <p class="letter-text">
+            Mom, everything about you inspires admiration — your strength, your grace, your heart.
+        </p>
+        <a href="#N1" class="next-btn">Next Letter →</a>
+    </section>
+
+    <!-- N -->
+    <section id="N1" class="letter-section fade-in">
+        <h1 class="letter-title">N — Nurturing</h1>
+        <img src="images/N1.JPG" class="letter-img" alt="A photo celebrating her nurturing qualities">
+        <p class="letter-text">
+            Your love grows everyone around you. You nurture with patience, warmth, and wisdom.
+        </p>
+        <a href="#T" class="next-btn">Next Letter →</a>
+    </section>
+
+    <!-- T -->
+    <section id="T" class="letter-section fade-in">
+        <h1 class="letter-title">T — Tenacious</h1>
+        <img src="images/T.jpg" class="letter-img" alt="A photo celebrating her tenacity">
+        <p class="letter-text">
+            You never give up. Your courage and determination make you unstoppable.
+        </p>
+        <a href="#H" class="next-btn">Next Letter →</a>
+    </section>
+
+    <!-- H -->
+    <section id="H" class="letter-section fade-in">
+        <h1 class="letter-title">H — Harmonious</h1>
+        <img src="images/H.JPG" class="letter-img" alt="A photo celebrating her harmonious nature">
+        <p class="letter-text">
+            You bring peace, balance, and calm wherever you go. You are harmony in human form.
+        </p>
+        <a href="#O" class="next-btn">Next Letter →</a>
+    </section>
+
+    <!-- O -->
+    <section id="O" class="letter-section fade-in">
+        <h1 class="letter-title">O — Outstanding</h1>
+        <img src="images/O.JPG" class="letter-img" alt="A photo celebrating her outstanding qualities">
+        <p class="letter-text">
+            Your presence stands out. Your kindness, beauty, and strength are truly outstanding.
+        </p>
+        <a href="#N2" class="next-btn">Next Letter →</a>
+    </section>
+
+    <!-- N -->
+    <section id="N2" class="letter-section fade-in">
+        <h1 class="letter-title">N — Noble</h1>
+        <img src="images/N2.JPG" class="letter-img" alt="A photo celebrating her noble character">
+        <p class="letter-text">
+            Your character is pure, dignified, and full of grace. You carry yourself with nobility.
+        </p>
+        <a href="#I" class="next-btn">Next Letter →</a>
+    </section>
+
+    <!-- I -->
+    <section id="I" class="letter-section fade-in">
+        <h1 class="letter-title">I — Irreplaceable</h1>
+        <img src="images/I.JPG" class="letter-img" alt="A photo celebrating how irreplaceable she is">
+        <p class="letter-text">
+            There is no one like you — not even close. You are truly irreplaceable.
+        </p>
+        <a href="#A2" class="next-btn">Next Letter →</a>
+    </section>
+
+    <!-- A -->
+    <section id="A2" class="letter-section fade-in">
+        <h1 class="letter-title">A — Angelic</h1>
+        <img src="images/A2.JPG" class="letter-img" alt="A photo celebrating her angelic kindness">
+        <p class="letter-text">
+            Your kindness feels heaven‑sent. You are an angel in human form.
+        </p>
+        <a href="#birthday-message" class="next-btn">Read Your Birthday Message →</a>
+    </section>
+
+    <section id="birthday-message" class="letter-section birthday-message-section">
+        <h1 class="letter-title">A Little Message, Just for You</h1>
+        <button type="button" class="next-btn" id="open-message">Open Your Birthday Message 💌</button>
+    </section>
+
+    <dialog class="message-dialog" id="birthday-dialog" aria-labelledby="birthday-dialog-title">
+        <article class="message-card">
+            <h2 id="birthday-dialog-title">💌 A Birthday Message for My Mother 💌</h2>
+            <p>Mom, there are so many things I could say about you,<br>
+                but none of them capture the fullness of your heart.</p>
+            <p>You are strength wrapped in grace,<br>
+                beauty wrapped in kindness,<br>
+                and love wrapped in warmth.</p>
+            <p>Today isn’t just your birthday —<br>
+                it’s a celebration of the incredible woman you are<br>
+                and the endless ways you make life brighter.</p>
+            <p>And Mom… we have a little surprise waiting for you.<br>
+                Something made with love, just for you.</p>
+            <button type="button" class="next-btn" id="close-message">Close Message</button>
+        </article>
+    </dialog>
+
+    <script>
+        const birthdayDialog = document.getElementById("birthday-dialog");
+
+        document.getElementById("open-message").addEventListener("click", () => {
+            birthdayDialog.showModal();
+        });
+
+        document.getElementById("close-message").addEventListener("click", () => {
+            birthdayDialog.close();
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && birthdayDialog.open) {
+                birthdayDialog.close();
+            }
+        });
+
+        birthdayDialog.addEventListener("click", (event) => {
+            if (event.target === birthdayDialog) {
+                birthdayDialog.close();
+            }
+        });
+    </script>
+
+</body>
+</html>
